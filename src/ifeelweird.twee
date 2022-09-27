@@ -9,4 +9,62 @@
 I Feel Weird
 
 :: Start
-Ludovica is moving from planet ??? to come to college on earth. She is moving away from her family for the first time.
+<<timed .5s t8n>>Well, this is it.
+<<next 2s t8n>>You've just arrived to college. 
+<<next 2s t8n>>And now you're alone.
+<<next 2s t8n>>Four lightyears away from your [[family]].
+<</timed>>
+
+:: family
+You've left your family on your home planet, Zillión,
+to take advantage of international space travel and 
+pursue your goal of going to college on Earth.
+
+<<linkreplace "Continue" t8n>>\
+It was the most difficult decision you've made this far,
+as your family means everything to you.
+
+    <<linkreplace "Continue" t8n>>\
+    But now you must take advantage of this oppurtunity
+    and learn how to [[be okay on your own|own]].
+
+    <</linkreplace>>
+<</linkreplace>>
+:: own
+So, here you are. After a long and exhausting
+ride across the galaxies, you've finally made it 
+to ??? University. 
+
+<<linkreplace "Continue" t8n>>\
+You've spent quite a bit of your time back home reseaching
+the human experiences, learning their facial expressions, body
+movements, how they eat, what they talk about, and how they 
+act in social situations. 
+
+    <<linkreplace "Continue" t8n>>\
+    While observing the stone paths before you which are shaded
+    by the green foliage above on the campus grounds, 
+    you start to think about just how different life is here. 
+
+        <<linkreplace "Continue" t8n>>\
+        You start to feel the uneasy, as normal human behaviors
+        do not come naturally to you. You are worried you won't 
+        fit in or they won't understand you. The feeling of isolation
+        is not a good one. 
+
+            <<linkreplace "Continue" t8n>>\Interrupting your thoughts before they cosume your entire mind, 
+            you decide it is time to get settled in and start figuring this whole
+            //human// thing out. 
+
+            [[Find your apartment|apartment]] 
+            [[Go declare a major|major]]
+            <</linkreplace>>
+        <</linkreplace>>   
+    <</linkreplace>>
+<</linkreplace>>
+
+:: apartment 
+blah blah blah 
+
+:: major
+blah blah blah 
