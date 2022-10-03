@@ -33,18 +33,17 @@ as your family means everything to you.
 :: own
 So, here you are. After a long and exhausting
 ride across the galaxies, you've finally made it 
-to ??? University. 
+to the University of North Carolina. 
 
 <<linkreplace "Continue" t8n>>\
-You've spent quite a bit of your time back home reseaching
-the human experiences, learning their facial expressions, body
-movements, how they eat, what they talk about, and how they 
-act in social situations. 
+Shaded by the green foliage above, you observe the stone paths covering the campus grounds and 
+start to think about just how different life is here.
 
     <<linkreplace "Continue" t8n>>\
-    While observing the stone paths before you which are shaded
-    by the green foliage above on the campus grounds, 
-    you start to think about just how different life is here. 
+     You've spent quite a bit of your time back home reseaching
+    the human experience, learning their facial expressions, body
+    movements, how they eat, what they talk about, and how they 
+    act in social situations. 
 
         <<linkreplace "Continue" t8n>>\
         You start to feel the uneasy, as normal human behaviors
@@ -64,7 +63,88 @@ act in social situations.
 <</linkreplace>>
 
 :: apartment 
-blah blah blah 
+After about a 10 minute walk off campus, you arrive at the place you will call 
+//home// for the next year. You look up at the 5 story building covered in red brick and white siding and notice people
+sitting out on their balconies, laughing with friends or watering plants that hang from the ceiling. 
+[[Go to the office and retrieve your apartment key|key]]
 
+:: key
+After about 30 minutes of filling out confusing paperwork and dissocoiating to the instructions the apartment manager gave you,
+you finally get to the door of your new place. 
+       
+     <<linkreplace "Continue" t8n>>\ You stand there for another minute, knowing that when you walk in you will have to 
+        introduce yourself to your roomates. Panic sets in as you stand there, terrified you will mess up your introduction
+        and come off as weird. 
+
+        //What if they hate you?//
+        //What if you say the wrong thing to them?//
+        //What if they think you are not interested in getting to know them? //
+
+        [[Go over your introduction script you rehearsed 20 times on your walk here.|introduction]]
+
+    <</linkreplace>>
+
+
+:: introduction
+You start to go over the lines in your head, hoping the converstation will go as planned. After one last run through, you
+unlock the door and slowly walk in. 
+
+<<linkreplace "Continue" t8n>>\ The smell of vanilla and clean linen hangs in the air. You look around and take in the layout. 
+Straight ahead is a small living room with a black leather couch and a cheap wooden coffee table decorated with fake plants and candles.
+A TV is set up on the wall and posters of what seemed to be characters from films hung around it. 
+
+    <<linkreplace "Continue" t8n>>\ 
+    Looking over to your left, you scan the quaint kitchen in an attempt to understand more about your new roomates. The fridge is crowded with photos 
+    of people smiling and laughing, takeout menus, and magnets in the shape of different earthly animals. One top of the fridge you note the very small
+    cups accompanied by an assortment of glass bottles filled with both clear and darker liquids. 
+
+        <<linkreplace "Continue" t8n>>\ 
+        Suddenly, you hear a door creak followed by the sound of shoes sliding on the wood floors. Your palms begin to feel hot and your heart speeds up
+        as you know that the dreaded introduction is coming. You snap your head to the direction of the noise, and see
+        a person come around the corner. 
+
+        [[Speak first|Speak]] 
+        [[Let the person speak first|first]]
+
+        <</linkreplace>>
+    <</linkreplace>>
+<</linkreplace>>
+
+:: Speak
+ this will be dialog of you speaking first 
+:: first
+this will be dialog of your roomate speaking first
 :: major
-blah blah blah 
+You walk through the glass doors of the campus library and search for an empty computer.
+While walking around, the sounds of the environment occupy your mind; 
+the clicking of the mouse, the heavy roar of the AC, the ringing on the phones,
+the noise of mumbled conversations around you. 
+
+ <<linkreplace "Continue" t8n>>\ You take a deep breath as you find an empty seat. 
+    After about 5 minutes of complete confusion and frusturation you find the major declaration page. 
+    
+        <<linkreplace "Continue" t8n>>\ You decide to declare a major in:
+            <<listbox "$major">>
+
+                <<option "Fine Arts">>
+                <<option "Psychology">>
+                <<option "Theatre">>
+                <<option "Computer Science">>
+
+            <</listbox>>
+
+                [[Continue]] 
+            
+        <</linkreplace>>
+<</linkreplace>>
+
+:: Continue
+You are now a <<print $major>> major. 
+
+     <<linkreplace "Continue" t8n>>\ Feeling confident in you decision and quite frustrated at the 
+     variety of noises around you, you log out of the computer
+     and decide it is time to [[head to your new living space|living]].
+    <</linkreplace>>
+
+
+:: living
