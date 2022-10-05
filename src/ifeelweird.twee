@@ -10,9 +10,9 @@ I Feel Weird
 
 :: Start
 <<timed .5s t8n>>Well, this is it.
-<<next 2s t8n>>You've just arrived to college. 
-<<next 2s t8n>>And now you're alone.
-<<next 2s t8n>>Four lightyears away from your [[family]].
+<<next 2s>>You've just arrived to college. 
+<<next 2s>>And now you're alone.
+<<next 2s>>Four lightyears away from your [[family]].
 <</timed>>
 
 :: family
@@ -51,7 +51,7 @@ start to think about just how different life is here.
         fit in or they won't understand you. The feeling of isolation
         is not a good one. 
 
-            <<linkreplace "Continue" t8n>>\Interrupting your thoughts before they cosume your entire mind, 
+            <<linkreplace "Continue" t8n>>\Interrupting your thoughts before they consume your entire mind, 
             you decide it is time to get settled in and start figuring this whole
             //human// thing out. 
 
@@ -69,7 +69,7 @@ sitting out on their balconies, laughing with friends or watering plants that ha
 [[Go to the office and retrieve your apartment key|key]]
 
 :: key
-After about 30 minutes of filling out confusing paperwork and dissocoiating to the instructions the apartment manager gave you,
+After about 30 minutes of filling out confusing paperwork and dissociating to the instructions the apartment manager gave you,
 you finally get to the door of your new place. 
        
      <<linkreplace "Continue" t8n>>\ You stand there for another minute, knowing that when you walk in you will have to 
@@ -111,9 +111,95 @@ A TV is set up on the wall and posters of what seemed to be characters from film
 <</linkreplace>>
 
 :: Speak
- this will be dialog of you speaking first 
+"Hi! My name is <<listbox "$name">>
+     <<option "Ludovica">>
+     <<option "other name">>
+     <<option "other name">>
+    <</listbox>>."
+        <<linkreplace "Continue">>\ 
+
+        "Hi <<print $name>>, I'm ???. It's nice to meet you!" ??? replies with a wide smile. 
+            <<linkreplace "\"You too!\" you give her a small grin.">> 
+                 "Let me show you where your room is."
+                 She pulls her auburn hair behind her ears, exposing more of her freckeld face. 
+                 Turning on her heels, she starts walking back down the hallway. 
+
+                 [[Follow behind ???|Follow]]
+                <</linkreplace>>
+        <</linkreplace>>
+
 :: first
-this will be dialog of your roomate speaking first
+"Hi! I'm ????. You're <<listbox "$name">>
+   <<option "Ludovica">>
+   <<option "other name">>
+   <<option "other name">>      
+    <</listbox>> right?"
+        <<linkreplace "Continue">>
+            <<linkappend "\"Yes, I'm <<print $name>>.\"">>
+
+                "It's so nice to meet you!" ??? smiles widley.
+
+                <<linkreplace "You smile back and hope that she hasn't noticed how tense you feel.">>
+                    "Here, let me show you where your room is." 
+                   
+                    ??? pulls her auburn hair behind her ears, exposing more of her freckeld face. Turning on her heels, 
+                    she starts walking back down the hallway. 
+                   
+                     [[Follow behind ???|Follow]]
+
+                <</linkreplace>>
+             <</linkappend>>     
+        <</linkreplace>>
+
+:: Follow
+    Walking behind ???, she leads you down the hallway. Pointing straight ahead she tells you that's where her room is. To the right is another door 
+    you find out belongs to your other roomate whom you haven't met yet. ??? says her name is Annabelle. 
+
+        <<linkreplace "Continue" t8n>> Stepping through the white door on the left, ??? states that this will be your room. 
+        
+        [[Take a look around|look]]
+
+    <</linkreplace>>
+
+:: look
+    INSERT PICTURE OF ROOM ???
+    you look around blah blah explaination 
+
+    <<linkreplace "Continue" t8n>>\ Well, I'll leave you to it. Let me know is you need anything." ??? says before walking out and closing the door behind her. 
+         <<linkreplace "Continue" t8n>>\ You take a few more seconds to look around, processing the interaction you just had and repeating it over in your head.
+        
+         [[Start Unpacking|Unpacking]] 
+          <</linkreplace>>
+    <</linkreplace>>
+
+:: Unpacking
+    Pulling the straps of your backpack off your shoudlers, you throw it on the desk that came with the apartment. 
+    You only brought enough stuff to fit in your school bag as it is quite difficult to move by spaceship. 
+    
+    <<linkreplace "Continue" t8n>>\ Unzipping your bag, you begin pulling your belongings out to st them up in your new room. 
+
+         <<linkreplace "Continue" t8n>>Insert image map to lookk at diff things ??? and get diff backsotries 
+
+            <<linkreplace "Continue" t8n>>After unpacking your things, you are reminded that classes start in just two days, and there are many things you need to get done. 
+            you make a list of things in hope that it will help you keep your thoughts organized. 
+             Your list reads:
+             * [[Declare a major|Declare]]
+             * [[Register for classes|classes]] 
+             * [[Go shopping for new room|shopping]]
+             * [[Contact family and talk with them about your arrival|Contact]]
+
+            <</linkreplace>>
+        <</linkreplace>>
+    <</linkreplace>>    
+
+:: Declare 
+
+:: classes
+
+:: shopping
+
+:: Contact
+
 :: major
 You walk through the glass doors of the campus library and search for an empty computer.
 While walking around, the sounds of the environment occupy your mind; 
@@ -140,7 +226,7 @@ the noise of mumbled conversations around you.
 
 :: Continue
 You are now a <<print $major>> major. 
-
+    
      <<linkreplace "Continue" t8n>>\ Feeling confident in you decision and quite frustrated at the 
      variety of noises around you, you log out of the computer
      and decide it is time to [[head to your new living space|living]].
@@ -148,3 +234,90 @@ You are now a <<print $major>> major.
 
 
 :: living
+After about a 10 minute walk off campus, you arrive at the place you will call 
+//home// for the next year. You look up at the 5 story building covered in red brick and white siding and notice people
+sitting out on their balconies, laughing with friends or watering plants that hang from the ceiling. 
+[[Go to the office and retrieve your apartment key|key]]
+
+:: key
+After about 30 minutes of filling out confusing paperwork and dissociating to the instructions the apartment manager gave you,
+you finally get to the door of your new place. 
+       
+     <<linkreplace "Continue" t8n>>\ You stand there for another minute, knowing that when you walk in you will have to 
+        introduce yourself to your roomates. Panic sets in as you stand there, terrified you will mess up your introduction
+        and come off as weird. 
+
+        //What if they hate you?//
+        //What if you say the wrong thing to them?//
+        //What if they think you are not interested in getting to know them? //
+
+        [[Go over your introduction script you rehearsed 20 times on your walk here.|introduction]]
+
+    <</linkreplace>>
+
+
+:: introduction
+You start to go over the lines in your head, hoping the converstation will go as planned. After one last run through, you
+unlock the door and slowly walk in. 
+
+<<linkreplace "Continue" t8n>>\ The smell of vanilla and clean linen hangs in the air. You look around and take in the layout. 
+Straight ahead is a small living room with a black leather couch and a cheap wooden coffee table decorated with fake plants and candles.
+A TV is set up on the wall and posters of what seemed to be characters from films hung around it. 
+
+    <<linkreplace "Continue" t8n>>\ 
+    Looking over to your left, you scan the quaint kitchen in an attempt to understand more about your new roomates. The fridge is crowded with photos 
+    of people smiling and laughing, takeout menus, and magnets in the shape of different earthly animals. One top of the fridge you note the very small
+    cups accompanied by an assortment of glass bottles filled with both clear and darker liquids. 
+
+        <<linkreplace "Continue" t8n>>\ 
+        Suddenly, you hear a door creak followed by the sound of shoes sliding on the wood floors. Your palms begin to feel hot and your heart speeds up
+        as you know that the dreaded introduction is coming. You snap your head to the direction of the noise, and see
+        a person come around the corner. 
+
+        [[Speak first|Speak]] 
+        [[Let the person speak first|first]]
+
+        <</linkreplace>>
+    <</linkreplace>>
+<</linkreplace>>
+
+:: Speak
+"Hi! My name is <<listbox "$name">>
+     <<option "Ludovica">>
+     <<option "other name">>
+     <<option "other name">>
+    <</listbox>>."
+        <<linkreplace "Continue">>\ 
+
+        "Hi <<print $name>>, I'm ???. It's nice to meet you!" ??? replies with a wide smile. 
+            <<linkreplace "\"You too!\" you give her a small grin.">> 
+                 "Let me show you where your room is."
+                 She pulls her auburn hair behind her ears, exposing more of her freckeld face. 
+                 Turning on her heels, she starts walking back down the hallway. 
+
+                 [[Follow behind ???|Follow]]
+                <</linkreplace>>
+        <</linkreplace>>
+
+:: first
+"Hi! I'm ????. You're <<listbox "$name">>
+   <<option "Ludovica">>
+   <<option "other name">>
+   <<option "other name">>      
+    <</listbox>> right?"
+        <<linkreplace "Continue">>
+            <<linkappend "\"Yes, I'm <<print $name>>.\"">>
+
+                "It's so nice to meet you!" ??? smiles widley.
+
+                <<linkreplace "You smile back and hope that she hasn't noticed how tense you feel.">>
+                    "Here, let me show you where your room is." 
+                   
+                    ??? pulls her auburn hair behind her ears, exposing more of her freckeld face. Turning on her heels, 
+                    she starts walking back down the hallway. 
+                   
+                     [[Follow behind ???|Follow]]
+
+                <</linkreplace>>
+             <</linkappend>>     
+        <</linkreplace>>
