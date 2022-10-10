@@ -15,6 +15,9 @@ I Feel Weird
 <<next 2s>>Four lightyears away from your [[family]].
 <</timed>>
 
+:: StoryInit
+<<set $major to false>>
+<<set $apartment to false>>
 :: family
 You've left your family on your home planet, Zillión,
 to take advantage of international space travel and 
@@ -63,6 +66,7 @@ start to think about just how different life is here.
 <</linkreplace>>
 
 :: apartment 
+<<set $apartment to true>>
 After about a 10 minute walk off campus, you arrive at the place you will call 
 //home// for the next year. You look up at the 5 story building covered in red brick and white siding and notice people
 sitting out on their balconies, laughing with friends or watering plants that hang from the ceiling. 
@@ -113,59 +117,58 @@ A TV is set up on the wall and posters of what seemed to be characters from film
 :: Speak
 "Hi! My name is <<listbox "$name">>
      <<option "Ludovica">>
-     <<option "other name">>
-     <<option "other name">>
+     <<option "Francis">>
+     <<option "Amelia">>
     <</listbox>>."
         <<linkreplace "Continue">>\ 
 
-        "Hi <<print $name>>, I'm ???. It's nice to meet you!" ??? replies with a wide smile. 
+        "Hi <<print $name>>, I'm Anastasia It's nice to meet you!" She replies with a wide smile. 
             <<linkreplace "\"You too!\" you give her a small grin.">> 
                  "Let me show you where your room is."
                  She pulls her auburn hair behind her ears, exposing more of her freckeld face. 
                  Turning on her heels, she starts walking back down the hallway. 
 
-                 [[Follow behind ???|Follow]]
+                 [[Follow behind Anastasia|Follow]]
                 <</linkreplace>>
         <</linkreplace>>
 
 :: first
-"Hi! I'm ????. You're <<listbox "$name">>
+"Hi! I'm Anastasia. You're <<listbox "$name">>
    <<option "Ludovica">>
-   <<option "other name">>
-   <<option "other name">>      
+   <<option "Francis">>
+   <<option "Amelia">>      
     <</listbox>> right?"
         <<linkreplace "Continue">>
             <<linkappend "\"Yes, I'm <<print $name>>.\"">>
 
-                "It's so nice to meet you!" ??? smiles widley.
+                "It's so nice to meet you!" Anastasia smiles widley.
 
                 <<linkreplace "You smile back and hope that she hasn't noticed how tense you feel.">>
                     "Here, let me show you where your room is." 
                    
-                    ??? pulls her auburn hair behind her ears, exposing more of her freckeld face. Turning on her heels, 
+                    She pulls her auburn hair behind her ears, exposing more of her freckeld face. Turning on her heels, 
                     she starts walking back down the hallway. 
                    
-                     [[Follow behind ???|Follow]]
+                     [[Follow behind Anastasia|Follow]]
 
                 <</linkreplace>>
              <</linkappend>>     
         <</linkreplace>>
 
 :: Follow
-    Walking behind ???, she leads you down the hallway. Pointing straight ahead she tells you that's where her room is. To the right is another door 
-    you find out belongs to your other roomate whom you haven't met yet. ??? says her name is Annabelle. 
+    Walking behind Anastasia, she leads you down the hallway. Pointing straight ahead she tells you that's where her room is. To the right is another door 
+    you find out belongs to your other roomate whom you haven't met yet. She says her name is Annabelle. 
 
-        <<linkreplace "Continue" t8n>> Stepping through the white door on the left, ??? states that this will be your room. 
+        <<linkreplace "Continue" t8n>> Stepping through the white door on the left, Anastasia states that this will be your room. 
         
         [[Take a look around|look]]
 
     <</linkreplace>>
 
 :: look
-    INSERT PICTURE OF ROOM ???
-    you look around blah blah explaination 
+    *INSERT PICTURE OF ROOM ???*
 
-    <<linkreplace "Continue" t8n>>\ Well, I'll leave you to it. Let me know is you need anything." ??? says before walking out and closing the door behind her. 
+    <<linkreplace "Continue" t8n>>\ Well, I'll leave you to it. Let me know is you need anything." Anastasia says before walking out and closing the door behind her. 
          <<linkreplace "Continue" t8n>>\ You take a few more seconds to look around, processing the interaction you just had and repeating it over in your head.
         
          [[Start Unpacking|Unpacking]] 
@@ -176,31 +179,76 @@ A TV is set up on the wall and posters of what seemed to be characters from film
     Pulling the straps of your backpack off your shoudlers, you throw it on the desk that came with the apartment. 
     You only brought enough stuff to fit in your school bag as it is quite difficult to move by spaceship. 
     
-    <<linkreplace "Continue" t8n>>\ Unzipping your bag, you begin pulling your belongings out to st them up in your new room. 
+    <<linkreplace "Continue" t8n>>\ Unzipping your bag, you begin pulling your belongings out to set them up in your new room. 
 
-         <<linkreplace "Continue" t8n>>Insert image map to lookk at diff things ??? and get diff backsotries 
+         <<linkreplace "Continue" t8n>> *Insert image map to lookk at diff things ??? and get diff backsotries* 
 
             <<linkreplace "Continue" t8n>>After unpacking your things, you are reminded that classes start in just two days, and there are many things you need to get done. 
             you make a list of things in hope that it will help you keep your thoughts organized. 
              Your list reads:
-             * [[Declare a major|Declare]]
-             * [[Register for classes|classes]] 
-             * [[Go shopping for new room|shopping]]
-             * [[Contact family and talk with them about your arrival|Contact]]
-
+             <<if $major is false>>
+                * [[Declare a major|major]] 
+                * Go shopping for new room
+                * Contact family and talk with them about your arrival
+             <<else >>
+                * ==Declare a major==
+                * [[Go shopping for new room|shopping]]
+                * Contact family and talk with them about your arrival
+             <</if>>
             <</linkreplace>>
         <</linkreplace>>
-    <</linkreplace>>    
-
-:: Declare 
-
-:: classes
+    <</linkreplace>>     
 
 :: shopping
+After a few hours of shopping at the local Walmart and Target, you arrive back at your apartment with a new pillow and comforter set, as well as
+some hygeine essentails. Anastasia left a note with her number on your bedroom door saying she will be at work until tonight and to text her if you need anything. 
+
+<<linkreplace "Continue" t8n>>\ You bought a few frozen meals from the store to last a few days until you go to buy groceries. Walking to the kitchen to 
+put them in the freezer, you take a look at the takeuot menus you noticed earlier attached to the fridge door. 
+
+    <<linkreplace "Continue" t8n>>\ You see one for a local pizza place called "Maria's Pizza". You've always wondered what Pizza tastes like as its not a thing
+    on Zillión. Debating for a few minutes on whether to order pizza or eat a frozen meal, you finally decide on 
+   
+    [[Pizza]]
+    [[Frozen meal|Frozen]]
+    <</linkreplace>>
+ <</linkreplace>>
+   
+:: Pizza
+You place an order online for a the reccomended popular item, a medium pepperoni pizza. 
+
+    <<linkreplace "Continue" t8n>> While you are waiting, you take a look at your list again 
+    to see what else you need to do: 
+    
+        <<linkreplace "Look at To-Do list" t8n>>\ 
+
+         * ==Declare a major==
+          * ==Go shopping for new room==
+          * [[Contact family and talk with them about your arrival|Contact]]
+
+        <</linkreplace>>
+    <</linkreplace>>
+
+:: Frozen
+You follow the instructions on the back of the box and turn the oven on. After a few minutes of waiting, the oven beeps letting you know 
+it's preheated. You put you frozen burrito on the shelf in the oven and set the timer for 30 minutes.
+
+ <<linkreplace "Continue" t8n>> While you are waiting, you take a look at your list again 
+    to see what else you need to do: 
+
+        <<linkreplace "Look at To-Do list" t8n>>\ 
+
+         * ==Declare a major==
+          * ==Go shopping for new room==
+          * [[Contact family and talk with them about your arrival|Contact]]
+
+        <</linkreplace>>
+    <</linkreplace>>
 
 :: Contact
-
+You will call your family 
 :: major
+<<set $major to true>>
 You walk through the glass doors of the campus library and search for an empty computer.
 While walking around, the sounds of the environment occupy your mind; 
 the clicking of the mouse, the heavy roar of the AC, the ringing on the phones,
@@ -226,98 +274,15 @@ the noise of mumbled conversations around you.
 
 :: Continue
 You are now a <<print $major>> major. 
+    <<if $apartment is false>>
+         <<linkreplace "Continue" t8n>>\ Feeling confident in you decision and quite frustrated at the 
+         variety of noises around you, you log out of the computer
+          and decide it is time to [[head to your new apartment|apartment]].
+            <</linkreplace>>
+     <<else>>
+         <<linkreplace "Continue" t8n>>\ Feeling confident in you decision and quite frustrated at the 
+         variety of noises around you, you log out of the computer
+        and decide it is time to [[Go shopping for your new room|shopping]]
+        <</linkreplace>>
+    <</if>>
     
-     <<linkreplace "Continue" t8n>>\ Feeling confident in you decision and quite frustrated at the 
-     variety of noises around you, you log out of the computer
-     and decide it is time to [[head to your new living space|living]].
-    <</linkreplace>>
-
-
-:: living
-After about a 10 minute walk off campus, you arrive at the place you will call 
-//home// for the next year. You look up at the 5 story building covered in red brick and white siding and notice people
-sitting out on their balconies, laughing with friends or watering plants that hang from the ceiling. 
-[[Go to the office and retrieve your apartment key|key]]
-
-:: key
-After about 30 minutes of filling out confusing paperwork and dissociating to the instructions the apartment manager gave you,
-you finally get to the door of your new place. 
-       
-     <<linkreplace "Continue" t8n>>\ You stand there for another minute, knowing that when you walk in you will have to 
-        introduce yourself to your roomates. Panic sets in as you stand there, terrified you will mess up your introduction
-        and come off as weird. 
-
-        //What if they hate you?//
-        //What if you say the wrong thing to them?//
-        //What if they think you are not interested in getting to know them? //
-
-        [[Go over your introduction script you rehearsed 20 times on your walk here.|introduction]]
-
-    <</linkreplace>>
-
-
-:: introduction
-You start to go over the lines in your head, hoping the converstation will go as planned. After one last run through, you
-unlock the door and slowly walk in. 
-
-<<linkreplace "Continue" t8n>>\ The smell of vanilla and clean linen hangs in the air. You look around and take in the layout. 
-Straight ahead is a small living room with a black leather couch and a cheap wooden coffee table decorated with fake plants and candles.
-A TV is set up on the wall and posters of what seemed to be characters from films hung around it. 
-
-    <<linkreplace "Continue" t8n>>\ 
-    Looking over to your left, you scan the quaint kitchen in an attempt to understand more about your new roomates. The fridge is crowded with photos 
-    of people smiling and laughing, takeout menus, and magnets in the shape of different earthly animals. One top of the fridge you note the very small
-    cups accompanied by an assortment of glass bottles filled with both clear and darker liquids. 
-
-        <<linkreplace "Continue" t8n>>\ 
-        Suddenly, you hear a door creak followed by the sound of shoes sliding on the wood floors. Your palms begin to feel hot and your heart speeds up
-        as you know that the dreaded introduction is coming. You snap your head to the direction of the noise, and see
-        a person come around the corner. 
-
-        [[Speak first|Speak]] 
-        [[Let the person speak first|first]]
-
-        <</linkreplace>>
-    <</linkreplace>>
-<</linkreplace>>
-
-:: Speak
-"Hi! My name is <<listbox "$name">>
-     <<option "Ludovica">>
-     <<option "other name">>
-     <<option "other name">>
-    <</listbox>>."
-        <<linkreplace "Continue">>\ 
-
-        "Hi <<print $name>>, I'm ???. It's nice to meet you!" ??? replies with a wide smile. 
-            <<linkreplace "\"You too!\" you give her a small grin.">> 
-                 "Let me show you where your room is."
-                 She pulls her auburn hair behind her ears, exposing more of her freckeld face. 
-                 Turning on her heels, she starts walking back down the hallway. 
-
-                 [[Follow behind ???|Follow]]
-                <</linkreplace>>
-        <</linkreplace>>
-
-:: first
-"Hi! I'm ????. You're <<listbox "$name">>
-   <<option "Ludovica">>
-   <<option "other name">>
-   <<option "other name">>      
-    <</listbox>> right?"
-        <<linkreplace "Continue">>
-            <<linkappend "\"Yes, I'm <<print $name>>.\"">>
-
-                "It's so nice to meet you!" ??? smiles widley.
-
-                <<linkreplace "You smile back and hope that she hasn't noticed how tense you feel.">>
-                    "Here, let me show you where your room is." 
-                   
-                    ??? pulls her auburn hair behind her ears, exposing more of her freckeld face. Turning on her heels, 
-                    she starts walking back down the hallway. 
-                   
-                     [[Follow behind ???|Follow]]
-
-                <</linkreplace>>
-             <</linkappend>>     
-        <</linkreplace>>
