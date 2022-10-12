@@ -1,6 +1,7 @@
 body {
     background-color: darkslategrey;
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
 
 a {
@@ -11,3 +12,23 @@ a:hover {
     color:lightgreen;
     text-decoration: none;
 }
+
+h1 {
+    color: rgb(220, 245, 220);
+    text-align: center;
+}
+
+.passage {
+    text-align: center;
+}
+
+#ui-bar {
+    background: black;
+    
+}
+
+#ui-bar :hover {
+    color: blueviolet;
+    
+}
+

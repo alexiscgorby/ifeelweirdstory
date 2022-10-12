@@ -101,6 +101,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	<!-- UUID://F542148E-EAA4-484E-887A-4DAE26754E27// --><tw-storydata name="I Feel Weird" startnode="1" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="F542148E-EAA4-484E-887A-4DAE26754E27" zoom="1" format="SugarCube" format-version="2.36.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
     background-color: darkslategrey;
     font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
 
 a {
@@ -110,12 +111,56 @@ a {
 a:hover {
     color:lightgreen;
     text-decoration: none;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">UIBar.show()</script><tw-passagedata pid="1" name="Start" tags="" position="100,100" size="100,100">&lt;&lt;timed .5s t8n&gt;&gt;Well, this is it.
+}
+
+h1 {
+    color: rgb(220, 245, 220);
+    text-align: center;
+}
+
+.passage {
+    text-align: center;
+}
+
+#ui-bar {
+    background: black;
+    
+}
+
+#ui-bar :hover {
+    color: blueviolet;
+    
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">UIBar.show()
+
+// dialog-api-macro-set.min.js, for SugarCube 2, by Chapel
+// v1.3.0, 2022-07-21, 3bdbdfbe5ae47a46e4f4e52766d78701939ae9a6
+;Macro.add("dialog",{tags:["onopen","onclose"],handler:function(){var t="",s=null,n=null,o=this.args.length>0?this.args[0]:"",e=this.args.length>1?this.args.slice(1).flatten():[];this.payload.forEach((function(o,e){0===e?t=o.contents:"onopen"===o.name?s=s?s+o.contents:o.contents:n=n?n+o.contents:o.contents})),e.push("macro-"+this.name),Dialog.setup(o,e.join(" ")),Dialog.wiki(t),s&&"string"==typeof s&&s.trim()&&$(document).one(":dialogopened",(function(){$.wiki(s)})),n&&"string"==typeof n&&n.trim()&&$(document).one(":dialogclosed",(function(){$.wiki(n)})),Dialog.open()}}),Macro.add("popup",{handler:function(){if(this.args.length<1)return this.error("need at least one argument; the passage to display");if(!Story.has(this.args[0]))return this.error("the passage "+this.args[0]+"does not exist");var t=this.args[0],s=this.args.length>1?this.args[1]:"",n=this.args.length>2?this.args.slice(2).flatten():[];n.push("macro-"+this.name),Dialog.setup(s,n.join(" ")),Dialog.wiki(Story.get(t).processText()),Dialog.open()}}),Macro.add("dialogclose",{skipArgs:!0,handler:function(){Dialog.close()}});
+// end dialog-api-macro-set.min.js</script><tw-passagedata pid="1" name="Start" tags="" position="100,100" size="100,100">&lt;&lt;timed .5s t8n&gt;&gt;Well, this is it.
 &lt;&lt;next 2s&gt;&gt;You&#39;ve just arrived to college. 
 &lt;&lt;next 2s&gt;&gt;And now you&#39;re alone.
 &lt;&lt;next 2s&gt;&gt;Four lightyears away from your [[family]].
 &lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="225,100" size="100,100">&lt;&lt;set $major to false&gt;&gt;
-&lt;&lt;set $apartment to false&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="family" tags="" position="350,100" size="100,100">You&#39;ve left your family on your home planet, Zillión,
+&lt;&lt;set $apartment to false&gt;&gt;
+&lt;&lt;set $key to false&gt;&gt;
+&lt;&lt;set $relationships to 0&gt;&gt;
+&lt;&lt;set $school to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="StoryMenu" tags="" position="350,100" size="100,100">&lt;&lt;link &quot;Points&quot;&gt;&gt;
+    &lt;&lt;dialog &#39;Points&#39;&gt;&gt;\
+    Relationships: $relationships
+    School: $school
+    &lt;&lt;/dialog&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Credits&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="family" tags="" position="475,100" size="100,100">!Before You Begin:
+Throughout the story, you will collect points based on some of your choices.
+You can gather points for both &#39;&#39;relationships&#39;&#39; and &#39;&#39;school&#39;&#39; 
+The number of points you collect can lead to access to certain choices and passages. 
+Check the &#39;&#39;&quot;Points&quot;&#39;&#39; page on the sidebar frequently to find out how many point you have. 
+
+[[Continue to Chapter 1|1]]</tw-passagedata><tw-passagedata pid="5" name="1" tags="" position="600,100" size="100,100">!Chapter 1: 
+!To Start a New Life
+
+You&#39;ve left your family on your home planet, Zillión,
 to take advantage of international space travel and 
 pursue your goal of going to college on Earth.
 
@@ -128,7 +173,7 @@ as your family means everything to you.
     and learn how to [[be okay on your own|own]].
 
     &lt;&lt;/linkreplace&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="own" tags="" position="475,100" size="100,100">So, here you are. After a long and exhausting
+&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="own" tags="" position="725,100" size="100,100">So, here you are. After a long and exhausting
 ride across the galaxies, you&#39;ve finally made it 
 to the University of North Carolina. 
 
@@ -157,24 +202,25 @@ start to think about just how different life is here.
             &lt;&lt;/linkreplace&gt;&gt;
         &lt;&lt;/linkreplace&gt;&gt;   
     &lt;&lt;/linkreplace&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="apartment" tags="" position="600,100" size="100,100">&lt;&lt;set $apartment to true&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="apartment" tags="" position="850,100" size="100,100">&lt;&lt;set $apartment to true&gt;&gt;
 After about a 10 minute walk off campus, you arrive at the place you will call 
 //home// for the next year. You look up at the 5 story building covered in red brick and white siding and notice people
 sitting out on their balconies, laughing with friends or watering plants that hang from the ceiling. 
-[[Go to the office and retrieve your apartment key|key]]</tw-passagedata><tw-passagedata pid="6" name="key" tags="" position="725,100" size="100,100">After about 30 minutes of filling out confusing paperwork and dissociating to the instructions the apartment manager gave you,
+[[Go to the office and retrieve your apartment key|key]]</tw-passagedata><tw-passagedata pid="8" name="key" tags="" position="975,100" size="100,100">&lt;&lt;set $key to true&gt;&gt;
+After about 30 minutes of filling out confusing paperwork and dissociating to the instructions the apartment manager gave you,
 you finally get to the door of your new place. 
        
      &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ You stand there for another minute, knowing that when you walk in you will have to 
         introduce yourself to your roomates. Panic sets in as you stand there, terrified you will mess up your introduction
         and come off as weird. 
 
-        //What if they hate you?//
+       @@color:lightblue; //What if they hate you?//
         //What if you say the wrong thing to them?//
-        //What if they think you are not interested in getting to know them? //
+        //What if they think you are not interested in getting to know them? //@@
 
         [[Go over your introduction script you rehearsed 20 times on your walk here.|introduction]]
 
-    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="introduction" tags="" position="850,100" size="100,100">You start to go over the lines in your head, hoping the converstation will go as planned. After one last run through, you
+    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="introduction" tags="" position="1100,100" size="100,100">You start to go over the lines in your head, hoping the converstation will go as planned. After one last run through, you
 unlock the door and slowly walk in. 
 
 &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ The smell of vanilla and clean linen hangs in the air. You look around and take in the layout. 
@@ -196,7 +242,8 @@ A TV is set up on the wall and posters of what seemed to be characters from film
 
         &lt;&lt;/linkreplace&gt;&gt;
     &lt;&lt;/linkreplace&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Speak" tags="" position="975,100" size="100,100">&quot;Hi! My name is &lt;&lt;listbox &quot;$name&quot;&gt;&gt;
+&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Speak" tags="" position="1225,100" size="100,100">&lt;&lt;set $relationships +=1 &gt;&gt;
+&quot;Hi! My name is &lt;&lt;listbox &quot;$name&quot;&gt;&gt;
      &lt;&lt;option &quot;Ludovica&quot;&gt;&gt;
      &lt;&lt;option &quot;Francis&quot;&gt;&gt;
      &lt;&lt;option &quot;Amelia&quot;&gt;&gt;
@@ -211,7 +258,7 @@ A TV is set up on the wall and posters of what seemed to be characters from film
 
                  [[Follow behind Anastasia|Follow]]
                 &lt;&lt;/linkreplace&gt;&gt;
-        &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="first" tags="" position="1100,100" size="100,100">&quot;Hi! I&#39;m Anastasia. You&#39;re &lt;&lt;listbox &quot;$name&quot;&gt;&gt;
+        &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="first" tags="" position="100,225" size="100,100">&quot;Hi! I&#39;m Anastasia. You&#39;re &lt;&lt;listbox &quot;$name&quot;&gt;&gt;
    &lt;&lt;option &quot;Ludovica&quot;&gt;&gt;
    &lt;&lt;option &quot;Francis&quot;&gt;&gt;
    &lt;&lt;option &quot;Amelia&quot;&gt;&gt;      
@@ -231,21 +278,21 @@ A TV is set up on the wall and posters of what seemed to be characters from film
 
                 &lt;&lt;/linkreplace&gt;&gt;
              &lt;&lt;/linkappend&gt;&gt;     
-        &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Follow" tags="" position="1225,100" size="100,100">Walking behind Anastasia, she leads you down the hallway. Pointing straight ahead she tells you that&#39;s where her room is. To the right is another door 
+        &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Follow" tags="" position="225,225" size="100,100">Walking behind Anastasia, she leads you down the hallway. Pointing straight ahead she tells you that&#39;s where her room is. To the right is another door 
     you find out belongs to your other roomate whom you haven&#39;t met yet. She says her name is Annabelle. 
 
         &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt; Stepping through the white door on the left, Anastasia states that this will be your room. 
         
         [[Take a look around|look]]
 
-    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="look" tags="" position="100,225" size="100,100">*INSERT PICTURE OF ROOM ???*
+    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="look" tags="" position="350,225" size="100,100">*INSERT PICTURE OF ROOM ???*
 
     &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ Well, I&#39;ll leave you to it. Let me know is you need anything.&quot; Anastasia says before walking out and closing the door behind her. 
          &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ You take a few more seconds to look around, processing the interaction you just had and repeating it over in your head.
         
          [[Start Unpacking|Unpacking]] 
           &lt;&lt;/linkreplace&gt;&gt;
-    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Unpacking" tags="" position="225,225" size="100,100">Pulling the straps of your backpack off your shoudlers, you throw it on the desk that came with the apartment. 
+    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Unpacking" tags="" position="475,225" size="100,100">Pulling the straps of your backpack off your shoudlers, you throw it on the desk that came with the apartment. 
     You only brought enough stuff to fit in your school bag as it is quite difficult to move by spaceship. 
     
     &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ Unzipping your bag, you begin pulling your belongings out to set them up in your new room. 
@@ -266,7 +313,7 @@ A TV is set up on the wall and posters of what seemed to be characters from film
              &lt;&lt;/if&gt;&gt;
             &lt;&lt;/linkreplace&gt;&gt;
         &lt;&lt;/linkreplace&gt;&gt;
-    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="shopping" tags="" position="350,225" size="100,100">After a few hours of shopping at the local Walmart and Target, you arrive back at your apartment with a new pillow and comforter set, as well as
+    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="shopping" tags="" position="600,225" size="100,100">After a few hours of shopping at the local Walmart and Target, you arrive back at your apartment with a new pillow and comforter set, as well as
 some hygeine essentails. Anastasia left a note with her number on your bedroom door saying she will be at work until tonight and to text her if you need anything. 
 
 &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ You bought a few frozen meals from the store to last a few days until you go to buy groceries. Walking to the kitchen to 
@@ -278,11 +325,11 @@ put them in the freezer, you take a look at the takeuot menus you noticed earlie
     [[Pizza]]
     [[Frozen meal|Frozen]]
     &lt;&lt;/linkreplace&gt;&gt;
- &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Pizza" tags="" position="475,225" size="100,100">You place an order online for a the reccomended popular item, a medium pepperoni pizza. 
+ &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Pizza" tags="" position="725,225" size="100,100">You place an order online for a the reccomended popular item, a medium pepperoni pizza. 
 
     &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt; While you are waiting, you take a look at your list again 
     to see what else you need to do: 
-    
+
         &lt;&lt;linkreplace &quot;Look at To-Do list&quot; t8n&gt;&gt;\ 
 
          * ==Declare a major==
@@ -290,7 +337,7 @@ put them in the freezer, you take a look at the takeuot menus you noticed earlie
           * [[Contact family and talk with them about your arrival|Contact]]
 
         &lt;&lt;/linkreplace&gt;&gt;
-    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Frozen" tags="" position="600,225" size="100,100">You follow the instructions on the back of the box and turn the oven on. After a few minutes of waiting, the oven beeps letting you know 
+    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Frozen" tags="" position="850,225" size="100,100">You follow the instructions on the back of the box and turn the oven on. After a few minutes of waiting, the oven beeps letting you know 
 it&#39;s preheated. You put you frozen burrito on the shelf in the oven and set the timer for 30 minutes.
 
  &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt; While you are waiting, you take a look at your list again 
@@ -303,7 +350,87 @@ it&#39;s preheated. You put you frozen burrito on the shelf in the oven and set 
           * [[Contact family and talk with them about your arrival|Contact]]
 
         &lt;&lt;/linkreplace&gt;&gt;
-    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Contact" tags="" position="725,225" size="100,100">You will call your family</tw-passagedata><tw-passagedata pid="17" name="major" tags="" position="850,225" size="100,100">&lt;&lt;set $major to true&gt;&gt;
+    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Contact" tags="" position="975,225" size="100,100">Grabbing the external connection booster device of of your desk, you connect it to your phone and press your mom&#39;s contact. 
+Listening to the ringback tone, you take a seat at the kitchen table.
+    
+        &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ A few seconds later, a familiar voice speaks from the other end. &quot;$name, is this you?&quot;
+
+             &lt;&lt;linkreplace &quot;\&quot;Hi mom, yes it&#39;s me. I am so happy to hear your voice.\&quot;&quot; t8n&gt;&gt;\ &quot;Hi darling, we have been so worried! How are things going on Earth?
+                Are the people weird? Are you okay?&quot;
+
+                 &lt;&lt;linkreplace&quot;\&quot;I am doing okay.\&quot; You say with a laugh&quot; t8n&gt;&gt;\ &quot;I met one of my roomates and she seems to be kind. I am pretty lonely and everything is a bit confusing. 
+                 I will get used to it though. How are things going at home?&quot;
+
+                    &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ &quot;Things are okay. We all miss you. I wish we could&#39;ve come to Earth with you&quot; she replies, guilt laced in her voice. 
+
+                        &lt;&lt;linkreplace &quot;\&quot;Its alright mom, I will figure everything out.\&quot;&quot; t8n&gt;&gt; &quot;You have responsibilities and an entire life on Zillión. They need you there.&quot;
+
+                            &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ &quot;I know, I just wish things could be different. I hope Earth gives you what you need to make a life for yourself.&quot; she says. 
+
+                                &lt;&lt;linkreplace&quot;\&quot;Thank you mom, I love you always.\&quot;&quot; t8n&gt;&gt; &quot;Classes start in a few days, I will let you know how they go.&quot;
+
+                                    &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ &quot;Okay, I love you too. Please contact us soon. We are all so proud of you.&quot;
+
+                                    [[Say goodbye|goodbye]]
+
+                                    &lt;&lt;/linkreplace&gt;&gt; 
+                                &lt;&lt;/linkreplace&gt;&gt;
+                            &lt;&lt;/linkreplace&gt;&gt;
+                        &lt;&lt;/linkreplace&gt;&gt;
+                    &lt;&lt;/linkreplace&gt;&gt;
+                 &lt;&lt;/linkreplace&gt;&gt;
+            &lt;&lt;/linkreplace&gt;&gt;
+        &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="goodbye" tags="" position="1100,225" size="100,100">Hanging up the phone, you sigh and try to shake the thoughts out of your head.
+
+    &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ This is going to be a long journey ahead of you.
+    You can only hope you have prepared yourself enough for what&#39;s to come.
+
+    [[Continue to Chapter 2|2]]
+     &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="2" tags="" position="1225,225" size="100,100">!Chapter 2: Wait, Is This Normal?
+
+
+Feelings of anticipation course through you as you approach campus. It&#39;s the first day of classes and you have no idea what to expect. 
+
+    &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ Education on Zillión was much more community based, and most young people learned from their parents or the family&#39;s around them. Children went to 
+    school only a few days a week and had more time spent with their family than at the school. College on Zillión didn&#39;t really exist other than specific technical schools. 
+      
+        &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ University is completely foreign to you. Already, you see more people on campus than you have ever seen in school back home.
+        
+             &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt; Standing upon campus, you realize you have no idea where the $major building is. Checking the time, it reads 8:55am. You realize your first class starts in 5 minutes.
+
+                [[Ask someone for directions|directions]] 
+                [[ Try and find the class yourself|yourself]]
+
+             &lt;&lt;/linkreplace&gt;&gt;
+          &lt;&lt;/linkreplace&gt;&gt;
+    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="directions" tags="" position="100,350" size="100,100">You look around for someone who looks kinds enough to help you with finding your class. 
+After a few seconds of searching, you see a person sitting down on a bench drinking a coffee. 
+You walk up to them apprehensivley, not wanting to interupt them. 
+
+    &lt;&lt;linkreplace&quot;\&quot;Excuse me, do you know where the $major building is?\&quot;&quot; t8n&gt;&gt;\
+     The person looks up and pushes their short, pink hair out of their face. 
+
+     &quot;Yeah, keep going &#39;&#39;straight&#39;&#39; until you see the &#39;&#39;fountain&#39;&#39;.&quot; 
+       
+        &lt;&lt;linkreplace &quot;Conitinue&quot; t8n&gt;&gt;
+        @@ color:lightblue;//Your thoughts intervene the persons directions. There&#39;s a person speaking to me right now. Looking into their eyes is weird. Wait, what did they just say?//@@
+
+            &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ 
+             There will be a &#39;&#39;café&#39;&#39; on that road. &#39;&#39;Across&#39;&#39; from it is the &#39;&#39;$major building&#39;&#39;.&quot;
+       
+            [[&quot;Okay, thank you so much.&quot; You smile and pretend like you just took in everything they said.|pretend]] 
+                
+             &lt;&lt;/linkreplace&gt;&gt;
+         &lt;&lt;/linkreplace&gt;&gt;
+     &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="pretend" tags="" position="225,350" size="100,100">You start walking towards the fountain. Unfortunately, you cannot remember anything else they said other than something about a café. 
+
+    &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ 
+    As you approach the fountain, you note there is a road going right and left. You try and peak down both streets in hopes you can see the café, but its not visible. 
+    Thinking fast, you decide to take 
+
+        [[the left road|left]]  
+        [[the right road|right]]
+    &lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="left" tags="" position="350,350" size="100,100">&lt;&lt;set $school +=1&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="right" tags="" position="475,350" size="100,100"></tw-passagedata><tw-passagedata pid="25" name="yourself" tags="" position="600,350" size="100,100"></tw-passagedata><tw-passagedata pid="26" name="major" tags="" position="725,350" size="100,100">&lt;&lt;set $major to true&gt;&gt;
 You walk through the glass doors of the campus library and search for an empty computer.
 While walking around, the sounds of the environment occupy your mind; 
 the clicking of the mouse, the heavy roar of the AC, the ringing on the phones,
@@ -325,7 +452,7 @@ the noise of mumbled conversations around you.
                 [[Continue]] 
             
         &lt;&lt;/linkreplace&gt;&gt;
-&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Continue" tags="" position="975,225" size="100,100">You are now a &lt;&lt;print $major&gt;&gt; major. 
+&lt;&lt;/linkreplace&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Continue" tags="" position="850,350" size="100,100">You are now a &lt;&lt;print $major&gt;&gt; major. 
     &lt;&lt;if $apartment is false&gt;&gt;
          &lt;&lt;linkreplace &quot;Continue&quot; t8n&gt;&gt;\ Feeling confident in you decision and quite frustrated at the 
          variety of noises around you, you log out of the computer

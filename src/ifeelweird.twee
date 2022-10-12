@@ -18,7 +18,32 @@ I Feel Weird
 :: StoryInit
 <<set $major to false>>
 <<set $apartment to false>>
-:: family
+<<set $key to false>>
+<<set $relationships to 0>>
+<<set $school to 0>>
+ 
+:: StoryMenu  
+<<link "Points">>
+    <<dialog 'Points'>>\
+    Relationships: $relationships
+    School: $school
+    <</dialog>>
+<</link>>
+<<link "Credits">><</link>>
+
+:: family 
+!Before You Begin:
+Throughout the story, you will collect points based on some of your choices.
+You can gather points for both ''relationships'' and ''school'' 
+The number of points you collect can lead to access to certain choices and passages. 
+Check the ''"Points"'' page on the sidebar frequently to find out how many point you have. 
+
+[[Continue to Chapter 1|1]]
+
+:: 1
+!Chapter 1: 
+!To Start a New Life
+
 You've left your family on your home planet, Zillión,
 to take advantage of international space travel and 
 pursue your goal of going to college on Earth.
@@ -73,6 +98,7 @@ sitting out on their balconies, laughing with friends or watering plants that ha
 [[Go to the office and retrieve your apartment key|key]]
 
 :: key
+<<set $key to true>>
 After about 30 minutes of filling out confusing paperwork and dissociating to the instructions the apartment manager gave you,
 you finally get to the door of your new place. 
        
@@ -80,9 +106,9 @@ you finally get to the door of your new place.
         introduce yourself to your roomates. Panic sets in as you stand there, terrified you will mess up your introduction
         and come off as weird. 
 
-        //What if they hate you?//
+       @@color:lightblue; //What if they hate you?//
         //What if you say the wrong thing to them?//
-        //What if they think you are not interested in getting to know them? //
+        //What if they think you are not interested in getting to know them? //@@
 
         [[Go over your introduction script you rehearsed 20 times on your walk here.|introduction]]
 
@@ -115,6 +141,7 @@ A TV is set up on the wall and posters of what seemed to be characters from film
 <</linkreplace>>
 
 :: Speak
+<<set $relationships +=1 >>
 "Hi! My name is <<listbox "$name">>
      <<option "Ludovica">>
      <<option "Francis">>
@@ -219,7 +246,7 @@ You place an order online for a the reccomended popular item, a medium pepperoni
 
     <<linkreplace "Continue" t8n>> While you are waiting, you take a look at your list again 
     to see what else you need to do: 
-    
+
         <<linkreplace "Look at To-Do list" t8n>>\ 
 
          * ==Declare a major==
@@ -246,7 +273,108 @@ it's preheated. You put you frozen burrito on the shelf in the oven and set the 
     <</linkreplace>>
 
 :: Contact
-You will call your family 
+Grabbing the external connection booster device of of your desk, you connect it to your phone and press your mom's contact. 
+Listening to the ringback tone, you take a seat at the kitchen table.
+    
+        <<linkreplace "Continue" t8n>>\ A few seconds later, a familiar voice speaks from the other end. "$name, is this you?"
+
+             <<linkreplace "\"Hi mom, yes it's me. I am so happy to hear your voice.\"" t8n>>\ "Hi darling, we have been so worried! How are things going on Earth?
+                Are the people weird? Are you okay?"
+
+                 <<linkreplace"\"I am doing okay.\" You say with a laugh" t8n>>\ "I met one of my roomates and she seems to be kind. I am pretty lonely and everything is a bit confusing. 
+                 I will get used to it though. How are things going at home?"
+
+                    <<linkreplace "Continue" t8n>>\ "Things are okay. We all miss you. I wish we could've come to Earth with you" she replies, guilt laced in her voice. 
+
+                        <<linkreplace "\"Its alright mom, I will figure everything out.\"" t8n>> "You have responsibilities and an entire life on Zillión. They need you there."
+
+                            <<linkreplace "Continue" t8n>>\ "I know, I just wish things could be different. I hope Earth gives you what you need to make a life for yourself." she says. 
+
+                                <<linkreplace"\"Thank you mom, I love you always.\"" t8n>> "Classes start in a few days, I will let you know how they go."
+
+                                    <<linkreplace "Continue" t8n>>\ "Okay, I love you too. Please contact us soon. We are all so proud of you."
+
+                                    [[Say goodbye|goodbye]]
+
+                                    <</linkreplace>> 
+                                <</linkreplace>>
+                            <</linkreplace>>
+                        <</linkreplace>>
+                    <</linkreplace>>
+                 <</linkreplace>>
+            <</linkreplace>>
+        <</linkreplace>>
+
+:: goodbye
+Hanging up the phone, you sigh and try to shake the thoughts out of your head.
+
+    <<linkreplace "Continue" t8n>>\ This is going to be a long journey ahead of you.
+    You can only hope you have prepared yourself enough for what's to come.
+
+    [[Continue to Chapter 2|2]]
+     <</linkreplace>>
+
+:: 2
+
+!Chapter 2: Wait, Is This Normal?
+
+
+Feelings of anticipation course through you as you approach campus. It's the first day of classes and you have no idea what to expect. 
+
+    <<linkreplace "Continue" t8n>>\ Education on Zillión was much more community based, and most young people learned from their parents or the family's around them. Children went to 
+    school only a few days a week and had more time spent with their family than at the school. College on Zillión didn't really exist other than specific technical schools. 
+      
+        <<linkreplace "Continue" t8n>>\ University is completely foreign to you. Already, you see more people on campus than you have ever seen in school back home.
+        
+             <<linkreplace "Continue" t8n>> Standing upon campus, you realize you have no idea where the $major building is. Checking the time, it reads 8:55am. You realize your first class starts in 5 minutes.
+
+                [[Ask someone for directions|directions]] 
+                [[ Try and find the class yourself|yourself]]
+
+             <</linkreplace>>
+          <</linkreplace>>
+    <</linkreplace>>
+
+:: directions
+You look around for someone who looks kinds enough to help you with finding your class. 
+After a few seconds of searching, you see a person sitting down on a bench drinking a coffee. 
+You walk up to them apprehensivley, not wanting to interupt them. 
+
+    <<linkreplace"\"Excuse me, do you know where the $major building is?\"" t8n>>\
+     The person looks up and pushes their short, pink hair out of their face. 
+
+     "Yeah, keep going ''straight'' until you see the ''fountain''." 
+       
+        <<linkreplace "Conitinue" t8n>>
+        @@ color:lightblue;//Your thoughts intervene the persons directions. There's a person speaking to me right now. Looking into their eyes is weird. Wait, what did they just say?//@@
+
+            <<linkreplace "Continue" t8n>>\ 
+             There will be a ''café'' on that road. ''Across'' from it is the ''$major building''."
+       
+            [["Okay, thank you so much." You smile and pretend like you just took in everything they said.|pretend]] 
+                
+             <</linkreplace>>
+         <</linkreplace>>
+     <</linkreplace>>
+
+:: pretend
+You start walking towards the fountain. Unfortunately, you cannot remember anything else they said other than something about a café. 
+
+    <<linkreplace "Continue" t8n>>\ 
+    As you approach the fountain, you note there is a road going right and left. You try and peak down both streets in hopes you can see the café, but its not visible. 
+    Thinking fast, you decide to take 
+
+        [[the left road|left]]  
+        [[the right road|right]]
+    <</linkreplace>>
+
+:: left 
+<<set $school +=1>>
+
+:: right
+
+:: yourself
+
 :: major
 <<set $major to true>>
 You walk through the glass doors of the campus library and search for an empty computer.
