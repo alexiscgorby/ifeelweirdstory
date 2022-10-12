@@ -336,6 +336,7 @@ Feelings of anticipation course through you as you approach campus. It's the fir
     <</linkreplace>>
 
 :: directions
+<<set $relationships +=1 >>
 You look around for someone who looks kinds enough to help you with finding your class. 
 After a few seconds of searching, you see a person sitting down on a bench drinking a coffee. 
 You walk up to them apprehensivley, not wanting to interupt them. 
@@ -369,11 +370,72 @@ You start walking towards the fountain. Unfortunately, you cannot remember anyth
     <</linkreplace>>
 
 :: left 
-<<set $school +=1>>
+<<set $school +=1 >>
+    You turn down the left road and start walking. After a few minutes you see the café. Looking across the street, you notice a sign that says $major Building. 
+       
+        <<linkreplace "Continue" t8n>>\ Walking in to the building, you find a directory on the wall and look for class 3041. 
+        You take the stairs to the third floor and find your class. glancing at your phone again you see the time is 8:59am. You made it just in time. Embarressment averted. 
+           
+            <<linkreplace "Continue" t8n>>\ You walk in and debate on where to sit. 
+            [[Sit in the front|front]]
+            [[ Sit near the back|back]]
+           
+            <</linkreplace>>
+        <</linkreplace>>
 
 :: right
+ You walk down the street on the right. After a couple minutes, you relaize you have just circled back around to where started. 
+   
+    <<linkreplace "Continue" t8n>>\ Frantically, you check the time. 8:58am. Shit. You run back down the street, past the fountain, and down the left road. 
+    You see the café and look around for any sign of your classroom building.
+       
+        <<linkreplace "Continue" t8n>>\ to the left, you see a large sign that says "$major Building". Darting inside, you see a directory and quickly find room 3041. 
+        You rush upstairs, jumping two steps at a time.
+           
+            <<linkreplace "Continue"t8n>>\ You get to the class and walk through the door. Scanning the room, everyone's eyes landed on you.
+             The professor looks at you with a small smile.
+             "Welcome, please take a seat"
+               
+                <<linkreplace "Continue"t8n>>\ You start walking to the seats, only to see the only one available is in the middle of the room. 
+                You quietly sit down and put your backpack on the ground. 
+                   
+                    <<linkreplace "Continue"t8n>>\ You try and listen to the professor, but your brain is preoccupied with embarrassmmet and replaying the situation over and over again in your head. 
+                     @@color:lightblue; //Welcome, please take a seat. Welcome, please take a seat. Welcome, please take a seat.//@@
+
+                     <</linkreplace>>
+                <</linkreplace>>
+            <</linkreplace>>
+         <</linkreplace>>
+    <</linkreplace>>
+
+:: front 
+<<set $school +=1>>
+You take a seat in the front of the room near the podium. Feeling comfortable with your choice, you relax a little. 
+ 
+    <<linkreplace "Continue" t8n>>\ After a long hour of introductions and going over the syllabus, you leave class. 
+    Checking your schedule, you see you have one other class today in the same building. 
+    <</linkreplace>>
+:: back
+You take a seat in the back of the room. You feel a little weary of your choice, nervous that there are more things in front of you that will distract you. 
+        <<linkreplace "Continue" t8n>>\ 
+        <</linkreplace>>
+
 
 :: yourself
+Deciding to figure out the directions yourself, you google the name of the building and use maps. 
+You start walking towards the big fountain then make a left. After a a couple minutes you walk past a café and notice groups of people sitting outside and laughing with eachother. 
+    <<set $school +=1>>
+    
+    <<linkreplace "Continue" t8n>>\ The maps tell you to go to your left. There, you see a sign that says "$major "Building". 
+    Walking in to the building, you find a directory on the wall and look for class 3041. 
+    You take the stairs to the third floor and find your class. glancing at your phone again you see the time is 9:00am. You made it just on time. Embarressment averted. 
+        
+         <<linkreplace "Continue" t8n>>\ You walk in and debate on where to sit.
+         [[Sit in the front|front]]
+         [[ Sit near the back|back]]
+       
+        <</linkreplace>>
+    <</linkreplace>>
 
 :: major
 <<set $major to true>>
