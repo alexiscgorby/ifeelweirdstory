@@ -2,15 +2,32 @@ body {
     background-color: darkslategrey;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+    color: antiquewhite;
+    
 }
+
+#passages {
+    border: darkseagreen groove 0.5em;
+	border-radius: 1em;
+	padding: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+}
+
 
 a {
     color:darkseagreen;
+    border: 1px solid darkseagreen;
+    padding: 3px;
+    border-radius: 0.5em;    
 }
 
 a:hover {
-    color:lightgreen;
+    color:antiquewhite;
     text-decoration: none;
+    border: 1px solid antiquewhite;
+    padding: 3px;
 }
 
 h1 {
@@ -23,12 +40,14 @@ h1 {
 }
 
 #ui-bar {
-    background: black;
-    
+    background: darkseagreen;
+    border-color: black;
 }
 
-#ui-bar :hover {
-    color: blueviolet;
-    
+.macro-listbox {
+    background: none;
+    border-color: antiquewhite;
+    margin-top: 1em;
+    border-radius: 0.5em;
+    color: rgb(220, 245, 220);
 }
-

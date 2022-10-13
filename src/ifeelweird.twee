@@ -21,7 +21,9 @@ I Feel Weird
 <<set $key to false>>
 <<set $relationships to 0>>
 <<set $school to 0>>
- 
+ <<set $mom to true>>
+ <<set $dad to true>>
+ <<set $anastasia to false>>
 :: StoryMenu  
 <<link "Points">>
     <<dialog 'Points'>>\
@@ -29,7 +31,17 @@ I Feel Weird
     School: $school
     <</dialog>>
 <</link>>
-<<link "Credits">><</link>>
+<<link "Contacts">>
+    <<dialog 'Contacts'>>\
+    Mom
+    Dad 
+    <<if $anastasia is true>> Anastasia <</if>>
+    <</dialog>>
+<</link>>    
+
+[[Credits]]
+
+:: Credits 
 
 :: family 
 !Before You Begin:
@@ -37,6 +49,7 @@ Throughout the story, you will collect points based on some of your choices.
 You can gather points for both ''relationships'' and ''school'' 
 The number of points you collect can lead to access to certain choices and passages. 
 Check the ''"Points"'' page on the sidebar frequently to find out how many point you have. 
+You can also aquire ''Contacts'' throughout the story. You can see the relationships you've inquired on the ''"Contacts"'' page. 
 
 [[Continue to Chapter 1|1]]
 
@@ -83,18 +96,58 @@ start to think about just how different life is here.
             you decide it is time to get settled in and start figuring this whole
             //human// thing out. 
 
-            [[Find your apartment|apartment]] 
+            [[Find your apartment|apartment]]        
             [[Go declare a major|major]]
             <</linkreplace>>
         <</linkreplace>>   
     <</linkreplace>>
 <</linkreplace>>
 
+:: major
+<<set $major to true>>
+You walk through the glass doors of the campus library and search for an empty computer.
+While walking around, the sounds of the environment occupy your mind; 
+the clicking of the mouse, the heavy roar of the AC, the ringing on the phones,
+the noise of mumbled conversations around you. 
+
+ <<linkreplace "Continue" t8n>>\ You take a deep breath as you find an empty seat. 
+    After about 5 minutes of complete confusion and frusturation you find the major declaration page. 
+    
+        <<linkreplace "Continue" t8n>>\ You decide to declare a major in:
+            <<listbox "$major">>
+
+                <<option "Fine Arts">>
+                <<option "Psychology">>
+                <<option "Theatre">>
+                <<option "Computer Science">>
+
+            <</listbox>>
+
+                [[Continue]] 
+            
+        <</linkreplace>>
+<</linkreplace>>
+
+:: Continue
+You are now a <<print $major>> major. 
+    <<if $apartment is false>>
+         <<linkreplace "Continue" t8n>>\ Feeling confident in you decision and quite frustrated at the 
+         variety of noises around you, you log out of the computer
+          and decide it is time to [[head to your new apartment|apartment]].
+            <</linkreplace>>
+     <<else>>
+         <<linkreplace "Continue" t8n>>\ Feeling confident in you decision and quite frustrated at the 
+         variety of noises around you, you log out of the computer
+        and decide it is time to [[Go shopping for your new room|shopping]]
+        <</linkreplace>>
+    <</if>>
+    
 :: apartment 
 <<set $apartment to true>>
 After about a 10 minute walk off campus, you arrive at the place you will call 
 //home// for the next year. You look up at the 5 story building covered in red brick and white siding and notice people
 sitting out on their balconies, laughing with friends or watering plants that hang from the ceiling. 
+
 [[Go to the office and retrieve your apartment key|key]]
 
 :: key
@@ -147,9 +200,11 @@ A TV is set up on the wall and posters of what seemed to be characters from film
      <<option "Francis">>
      <<option "Amelia">>
     <</listbox>>."
+
         <<linkreplace "Continue">>\ 
 
         "Hi <<print $name>>, I'm Anastasia It's nice to meet you!" She replies with a wide smile. 
+            
             <<linkreplace "\"You too!\" you give her a small grin.">> 
                  "Let me show you where your room is."
                  She pulls her auburn hair behind her ears, exposing more of her freckeld face. 
@@ -193,9 +248,10 @@ A TV is set up on the wall and posters of what seemed to be characters from film
     <</linkreplace>>
 
 :: look
-    *INSERT PICTURE OF ROOM ???*
-
-    <<linkreplace "Continue" t8n>>\ Well, I'll leave you to it. Let me know is you need anything." Anastasia says before walking out and closing the door behind her. 
+    INSERT IMAGE OF BEDROOM
+   
+    <<linkreplace "Continue" t8n>>\ "Well, I'll leave you to it. Let me know is you need anything." Anastasia says before walking out and closing the door behind her. 
+         
          <<linkreplace "Continue" t8n>>\ You take a few more seconds to look around, processing the interaction you just had and repeating it over in your head.
         
          [[Start Unpacking|Unpacking]] 
@@ -203,15 +259,12 @@ A TV is set up on the wall and posters of what seemed to be characters from film
     <</linkreplace>>
 
 :: Unpacking
-    Pulling the straps of your backpack off your shoudlers, you throw it on the desk that came with the apartment. 
+    Pulling the straps of your backpack off your shoulders, you throw it on the desk that came with the apartment. 
     You only brought enough stuff to fit in your school bag as it is quite difficult to move by spaceship. 
     
-    <<linkreplace "Continue" t8n>>\ Unzipping your bag, you begin pulling your belongings out to set them up in your new room. 
-
-         <<linkreplace "Continue" t8n>> *Insert image map to lookk at diff things ??? and get diff backsotries* 
-
-            <<linkreplace "Continue" t8n>>After unpacking your things, you are reminded that classes start in just two days, and there are many things you need to get done. 
-            you make a list of things in hope that it will help you keep your thoughts organized. 
+     <<linkreplace "Continue" t8n>>After unpacking your things, which consisted of a family photo, your comfort stuffed animal, noise canceling headphones, a couple outfits, and electronic power chords and connectors, you are reminded that classes start in just two days, and there are many things you need to get done. 
+       
+        <<linkreplace "Continue" t8n>>\ You make a list of things in hope that it will help you keep your thoughts organized. 
              Your list reads:
              <<if $major is false>>
                 * [[Declare a major|major]] 
@@ -222,15 +275,19 @@ A TV is set up on the wall and posters of what seemed to be characters from film
                 * [[Go shopping for new room|shopping]]
                 * Contact family and talk with them about your arrival
              <</if>>
-            <</linkreplace>>
-        <</linkreplace>>
-    <</linkreplace>>     
+
+         <</linkreplace>>
+    <</linkreplace>>
 
 :: shopping
 After a few hours of shopping at the local Walmart and Target, you arrive back at your apartment with a new pillow and comforter set, as well as
-some hygeine essentails. Anastasia left a note with her number on your bedroom door saying she will be at work until tonight and to text her if you need anything. 
+some hygeine essentails. You see that there is a note on your door. 
 
-<<linkreplace "Continue" t8n>>\ You bought a few frozen meals from the store to last a few days until you go to buy groceries. Walking to the kitchen to 
+<<linkreplace "Read it" t8n>>\ [img[anastasia.jpg]]
+   
+ <<linkreplace "Continue" t8n>>\ Picking up the note, you put it on your desk and add her to your contacts. 
+<<set $anastasia to true>>
+<<linkreplace "Continue" t8n>>\ Unbagging the frozen meals you bought from the store, you walk to the kitchen to 
 put them in the freezer, you take a look at the takeuot menus you noticed earlier attached to the fridge door. 
 
     <<linkreplace "Continue" t8n>>\ You see one for a local pizza place called "Maria's Pizza". You've always wondered what Pizza tastes like as its not a thing
@@ -239,6 +296,8 @@ put them in the freezer, you take a look at the takeuot menus you noticed earlie
     [[Pizza]]
     [[Frozen meal|Frozen]]
     <</linkreplace>>
+ <</linkreplace>>
+ <</linkreplace>>
  <</linkreplace>>
    
 :: Pizza
@@ -317,7 +376,6 @@ Hanging up the phone, you sigh and try to shake the thoughts out of your head.
 :: 2
 
 !Chapter 2: Wait, Is This Normal?
-
 
 Feelings of anticipation course through you as you approach campus. It's the first day of classes and you have no idea what to expect. 
 
@@ -425,8 +483,7 @@ You take a seat in the back of the room. You feel a little weary of your choice,
 Deciding to figure out the directions yourself, you google the name of the building and use maps. 
 You start walking towards the big fountain then make a left. After a a couple minutes you walk past a café and notice groups of people sitting outside and laughing with eachother. 
     <<set $school +=1>>
-    
-    <<linkreplace "Continue" t8n>>\ The maps tell you to go to your left. There, you see a sign that says "$major "Building". 
+    <<linkreplace "Continue" t8n>>\ The maps tell you to go to your left. There, you see a sign that says "$major Building". 
     Walking in to the building, you find a directory on the wall and look for class 3041. 
     You take the stairs to the third floor and find your class. glancing at your phone again you see the time is 9:00am. You made it just on time. Embarressment averted. 
         
@@ -437,42 +494,3 @@ You start walking towards the big fountain then make a left. After a a couple mi
         <</linkreplace>>
     <</linkreplace>>
 
-:: major
-<<set $major to true>>
-You walk through the glass doors of the campus library and search for an empty computer.
-While walking around, the sounds of the environment occupy your mind; 
-the clicking of the mouse, the heavy roar of the AC, the ringing on the phones,
-the noise of mumbled conversations around you. 
-
- <<linkreplace "Continue" t8n>>\ You take a deep breath as you find an empty seat. 
-    After about 5 minutes of complete confusion and frusturation you find the major declaration page. 
-    
-        <<linkreplace "Continue" t8n>>\ You decide to declare a major in:
-            <<listbox "$major">>
-
-                <<option "Fine Arts">>
-                <<option "Psychology">>
-                <<option "Theatre">>
-                <<option "Computer Science">>
-
-            <</listbox>>
-
-                [[Continue]] 
-            
-        <</linkreplace>>
-<</linkreplace>>
-
-:: Continue
-You are now a <<print $major>> major. 
-    <<if $apartment is false>>
-         <<linkreplace "Continue" t8n>>\ Feeling confident in you decision and quite frustrated at the 
-         variety of noises around you, you log out of the computer
-          and decide it is time to [[head to your new apartment|apartment]].
-            <</linkreplace>>
-     <<else>>
-         <<linkreplace "Continue" t8n>>\ Feeling confident in you decision and quite frustrated at the 
-         variety of noises around you, you log out of the computer
-        and decide it is time to [[Go shopping for your new room|shopping]]
-        <</linkreplace>>
-    <</if>>
-    
