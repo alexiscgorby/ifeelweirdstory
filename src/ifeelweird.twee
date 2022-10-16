@@ -262,7 +262,7 @@ A TV is set up on the wall and posters of what seemed to be characters from film
     Pulling the straps of your backpack off your shoulders, you throw it on the desk that came with the apartment. 
     You only brought enough stuff to fit in your school bag as it is quite difficult to move by spaceship. 
     
-     <<linkreplace "Continue" t8n>>After unpacking your things, which consisted of a family photo, your comfort stuffed animal, noise canceling headphones, a couple outfits, and electronic power chords and connectors, you are reminded that classes start in just two days, and there are many things you need to get done. 
+     <<linkreplace "Continue" t8n>>After unpacking your things, which consisted of a family photo, your laptop, your comfort stuffed animal, noise canceling headphones, a couple outfits, and electronic power chords and connectors, you are reminded that classes start in just two days, and there are many things you need to get done. 
        
         <<linkreplace "Continue" t8n>>\ You make a list of things in hope that it will help you keep your thoughts organized. 
              Your list reads:
@@ -460,6 +460,11 @@ You start walking towards the fountain. Unfortunately, you cannot remember anyth
                     <<linkreplace "Continue"t8n>>\ You try and listen to the professor, but your brain is preoccupied with embarrassmmet and replaying the situation over and over again in your head. 
                      @@color:lightblue; //Welcome, please take a seat. Welcome, please take a seat. Welcome, please take a seat.//@@
 
+                        <<linkreplace "Continue" t8n>>\ After a long three hours of $major classes going over the syllabus and doing introductions, you finally made it though your first day of classes. 
+                         you have a few assinments to get done.  
+                         [[Go home to study|home]]
+
+                        <</linkreplace>>
                      <</linkreplace>>
                 <</linkreplace>>
             <</linkreplace>>
@@ -470,14 +475,20 @@ You start walking towards the fountain. Unfortunately, you cannot remember anyth
 <<set $school +=1>>
 You take a seat in the front of the room near the podium. Feeling comfortable with your choice, you relax a little. 
  
-    <<linkreplace "Continue" t8n>>\ After a long hour of introductions and going over the syllabus, you leave class. 
-    Checking your schedule, you see you have one other class today in the same building. 
+    <<linkreplace "Continue" t8n>>\ After a long three hours of $major classes going over the syllabus and doing introductions, you finally made it though your first day of classes. 
+        you have a few assinments to get done.  
+        [[Go home to study|home]]
+        
     <</linkreplace>>
+
 :: back
 You take a seat in the back of the room. You feel a little weary of your choice, nervous that there are more things in front of you that will distract you. 
-        <<linkreplace "Continue" t8n>>\ 
-        <</linkreplace>>
+       
+        <<linkreplace "Continue" t8n>>\ After a long three hours of $major classes going over the syllabus and doing introductions, you finally made it though your first day of classes. 
+            you have a few assinments to get done. 
+         [[Go home to study|home]]
 
+        <</linkreplace>>
 
 :: yourself
 Deciding to figure out the directions yourself, you google the name of the building and use maps. 
@@ -489,8 +500,196 @@ You start walking towards the big fountain then make a left. After a a couple mi
         
          <<linkreplace "Continue" t8n>>\ You walk in and debate on where to sit.
          [[Sit in the front|front]]
-         [[ Sit near the back|back]]
+         [[Sit near the back|back]]
        
         <</linkreplace>>
     <</linkreplace>>
 
+:: home
+ Walking back home, you walk through the door to see Anastasia sitting at the table.
+    
+    <<linkreplace "Say Hi" t8n>>\ You exchange greetings. 
+    "How are you doing today?" Anastasia inquires. 
+      
+        <<linkreplace "Im doing well.">>\ Remembering its socially respectful to ask that question back you force out a "How are you doing?"
+           
+            <<linkreplace "Continue" t8n>>\ "Im doing great, thanks for asking. <<set $relationships +=1>> How was your first day of classes?"
+           
+                 <<linkreplace "\"It was okay, they've given me lots of homeork already though.\"" t8n>>\ "Man, that sucks. you'd think they'd be more chill on the first day. What's your major?" she asks. 
+               
+                    <<linkreplace "\"I'm a $major major\"" t8n>>\ Forcing at another socailly acceptable response, you ask what she is studying.
+                   
+                         <<linkreplace "Continue" t8n>> "I'm a Biology major." she responds. Giving her a small smile and nod, you tell her you've got to go work on you school work before walking to your [[room]].
+                
+                        <</linkreplace>>
+                    <</linkreplace>>
+                 <</linkreplace>>
+             <</linkreplace>>
+         <</linkreplace>>
+    <</linkreplace>>
+
+:: room
+You never really understood why people ask questions like that. You've always just figured that people will talk about what they want to without someone else initiating the topic. 
+It just seemed more efficient to talk that way. On Zillión that's pretty much how it went. You just started talking about things umprompted. 
+                           
+ <<linkreplace "Continiue" t8n>>\ Also, the fact that if someone tells you a story, you are supposed to ask more questions about them rather than bring up a story about yourself to show them you relate and understand them. What's that about?
+                           
+     <<linkreplace "Continue" t8n>>\ That is something completely foreign to you. There are so many social customs that you have to remember here on earth to not be considered rude or uninteresed, it's exhausting. 
+                               
+          <<linkreplace "Continue" t8n>>\ And don't even get started on the fact that people on earth speak //so slow//. Most of the time, you've finished their sentence in your head and have already answered them, but cannot speak it until they've finished talking. 
+                                
+               <<linkreplace"Continue" t8n>> Most people on Zillión are like that, except you've found the men generally interrupt, but most of the women stay quiet and just explode into a million piece on the inside until they can speak. 
+
+                <<linkreplace "Continue" t8n>>\ And seriously, people seem to pay attention to others so easily. are they all dying on the inside? For you, your brain dives off into a million other places while someone is talking. Looking into their eyes comfortably is pretty much impossible.
+                                  
+                      <<linkreplace"Coninue" t8n>> You find it much easier to pay attention if you are looking down. If theres even the slightest hint of background noise, you are done for. Someone typing on a keyboard behind you? The clock ticking? There's no way you are processing a word of that conversation. 
+                                      
+                          <<linkreplace "Continue"t8n>>\ Yet, here on Earth you are expected to pay attention, make eye contact, respond to conversation, and mask the exhausting feeling of discomfort, pushing down the bubble inside you that wants to scream and run away and go on and on about whatever topic you have become hyperfixated on at the time. 
+                                        
+                              <<linkreplace "Continue" t8n>>\ You wonder, does everyone think like this? Does everyone constantly analyze the body movements of the people they are around and mimic their gestures to make it seem more natural?
+                                 Does everyone get completely distracted and frustrated by every little noise around them that they are not in control of? Does everyone think //am I making to much eye contact right now? look away for a second. tilt your head to the side. okay nod so they know you are with them.//?
+                                 Does everyone think about every single thing but also nothing at the same time because their brains cannot stay on one train of thought for more than 2 seconds. Does everyone make their bed every single night before they go to sleep because they cannot stand the thought or feeling of a single wrinkle touching your body?
+                                            
+                                     <<linkreplace "Continue" t8n>>\ Still, you sit down at your desk and pull out your laptop to look at your assignemts like you aren't slowly going insane [[inside]]. 
+
+                                     <</linkreplace>>
+                                <</linkreplace>>
+                            <</linkreplace>>
+                        <</linkreplace>>
+                     <</linkreplace>>
+                 <</linkreplace>>
+             <</linkreplace>>
+         <</linkreplace>>
+     <</linkreplace>>
+  
+
+:: inside 
+Its been a week since your classes started. So far, they've gone okay. It's now the weekend, Anastasia invited you out to dinner with her and Annabelle because she is coming back into town today. 
+
+<<linkreplace "Continue" t8n>>\You said yes because you want to get to know them even though you are nervous. They said to be ready at 6pm. Before that, you must get some school work done before its due. 
+
+    <<linkreplace "Continue" t8n>>\You glance at the clock
+
+    11:00a.m. 
+
+        <<linkreplace"Continue" t8n>>\ @@ color: lightblue; //okay, so, it's 11 which means its basically 1pm. Since it's almost 1, it might as well be 3. I need to get ready around 5. I have to eat at some point. So I basically have about 3 hours to do my work.// @@
+        
+            <<linkreplace "Continue" t8n>>\ You start to panic internally, your brain keeps bouncing back and forth between //I dont have time, I need to start my work now// and //you have plenty of time just start in in an hour.//
+       
+                <<linkreplace "Continue"t8n>>\ After internally debating for about 30 minutes, you decide to 
+                   
+                    [[Start your work now|now]]
+                    [[Start your work in an hour|hour]]
+                <</linkreplace>>
+             <</linkreplace>>
+        <</linkreplace>>
+    <</linkreplace>>
+<</linkreplace>>
+
+:: now
+You hop on your laptop and look at your coursework calender. Clicking on the assignment due first, you realize you have to read a long article for a discussion post. 
+    
+    <<linkreplace"Continue"t8n>>\ Well, thats not good. You have always been really bad at reading. The attention span just isn't there. Unless you are extremely interested in the plot, its almost useless to even try. 
+       
+         <<linkreplace"Continue"t8n>>\ You sigh, knowing that this article is going to exhaust you. This alone will take up all of your time today. 
+
+             <<linkreplace"Continue"t8n>>\ It's almost like you can easily process words individually, but the second they are put into sentences stacked next to eachother, all words lose their meaning. 
+
+                <<linkreplace"Continue"t8n>>\ Already, you feel discouraged. But you attempt to [[read it anyways.|read]] 
+
+                <</linkreplace>>
+            <</linkreplace>>
+        <</linkreplace>>
+    <</linkreplace>>
+:: hour
+It's now been three hours since you said you will start in an hour. You've been obsessing over natural disaster videos and haven't stopped to even look at your assignemt. Though, the entire time you have been thinking //you really need to start your work.//
+
+    <<linkreplace"Continue"t8n>>\Its 2pm. You log into your school's website and see what work you have to do. You see that the assignment due first requires you to read a long article. Immediatley no. 
+
+        <<linkreplace"Continue"t8n>>\You find the easiest assignment you have, even though its due a week from now. It's a 10 question quiz. You begin the quizz and finish it within 7 minutes. 
+
+            <<linkreplace"Continue"t8n>>\Well, at least you did something. Looking at another assignment, you see your professor posted some videos for the class to watch. 
+
+                <<linkreplace"Continue"t8n>>\Clicking on the link to one of the videos, you start to watch it, putting it in 1.75x speed so you have a chance of retaining the information better. 
+
+                    <<linkreplace"Continue"t8n>>\Looking around the screen, you see a video in your reccomended thats right up your alley: //'Top 5 tornadoes in the U.S.'//. 
+
+                        <<linkreplace"Continue"t8n>>\You click on it and deicde you'll watch the video for school later. 
+
+                            <<linkreplace"Continue"t8n>>\After going down another rabbit hole that feels impossible and painful to pull yourself out of, you go to the bathroom. 
+
+                                <<linkreplace"Continue"t8n>>\ Washing your hands, you notice the sink is dirty. You start to deep clean the sink, which then leads to you cleaning the entirity of your room. 
+
+                                    <<linkreplace"Continue"t8n>>\ Feeling accomplised, you look over to your desk and see your computer asleep. Oh yeah. You start to regret not doing any work.  Well, that's a problem for future you. You'll get it done before its due. 
+
+                                        <<linkreplace"Continue"t8n>>\ Looking at the clock, it's now 4. You forgot to eat lunch. You think, //it's okay, you'll be going to dinner soon.//
+
+                                             <<linkreplace "Continue"t8n>>\ So you get back on your phone and look at more videos of natrual distasters until 5:30. Time to get ready for [[dinner]].  
+
+                                            <</linkreplace>>
+                                        <</linkreplace>>
+                                    <</linkreplace>>
+                                <</linkreplace>>
+                            <</linkreplace>>
+                        <</linkreplace>>
+                    <</linkreplace>>
+                <</linkreplace>>
+            <</linkreplace>>
+        <</linkreplace>>
+    <</linkreplace>>            
+
+:: read
+
+Looking up at the clock, it reads 2pm. You look down at your computer, which has about 3 other tabs open. 
+
+You have shifted from sitting at your desk to the floor to your bed and back to your desk. 
+
+    <<linkreplace"Continue"t8n>>\ You scroll through the reading document to asses how much you've read and see how much you have to go. 
+
+         <<linkreplace"Continue"t8n>>\ Just Great. You've just gotten to page 4. You gave up on reading a while ago and started looking into your newest interest, natural disasters on Earth. 
+
+            <<linkreplace"Continue"t8n>>\About 30 minutes ago you pulled yourself back together and began reading again. Or, at least tried to. 
+
+                <<linkreplace"Continue"t8n>>\Honestly, it would be a miracle if you've retained any of the information so far. You've read the same 4 paragraphs over and over again, trying to grasp the information before your brain goes off into a million other litle thoughts. 
+
+                    <<linkreplace"Continue"t8n>>\Okay, time to ditch this assignment, You'll try again when it gets closer to the due date. 
+
+                     <<linkreplace"Continue"t8n>>\Looking at your other classes, you see an easy 10 question quiz that wont require much focus. Taking about 7 minutes to do it, you feel a small victory. 
+
+                         <<linkreplace"Continue"t8n>>\Well, at least you did something. Looking at another assignment, you see your professor posted some videos for the class to watch. 
+
+                            <<linkreplace"Continue"t8n>>\Going to the links, you atomtically put them in 1.75x speed so they are talking as fast as your brain is going. 
+
+                                 <<linkreplace"Continue"t8n>>\You get through one 10 minute video. Time to get back on your phone. After abou 30 minutes of endless scrolling, You go to the bathroom. 
+
+                                    <<linkreplace"Continue"t8n>>\Washing your hands, you notice the sink is dirty. You start to deep clean the sink, which then leads to you cleaning the entirity of your room. 
+                                            
+                                         <<linkreplace"Continue"t8n>>\  Feeling accomplised, you look over to your desk and see your computer asleep. Oh yeah. Well, that's a problem for future you. You'll get it done before its due. 
+
+                                             <<linkreplace"Continue"t8n>>\ Looking at the clock, it's now 4. You forgot to eat lunch. You think, //it's okay, you'll be going to dinner soon.//
+
+                                                <<linkreplace "Continue"t8n>>\ So you get back on your phone and look at more videos of natrual distasters until 5:30. Time to get ready for [[dinner]].  
+
+                                                 <</linkreplace>>
+                                            <</linkreplace>>
+                                        <</linkreplace>>
+                                    <</linkreplace>>
+                                <</linkreplace>>
+                            <</linkreplace>>
+                        <</linkreplace>>
+                    <</linkreplace>>
+                <</linkreplace>>
+            <</linkreplace>>
+        <</linkreplace>>
+    <</linkreplace>>
+<</linkreplace>>
+
+
+
+:: dinner           
+
+After a few hours out, you arrive back home from a local sushi resturaunt with Annabelle and Anastasia
+
+Over dinner, the tree of you talked and got to know echother a little better. It was still a quite discomforting feeling for you still. 
+Again, you found it hard to ask genuine questions and relate to them. The seem to be very nice, you just don't feel a deep conncetion. 
+The feeling of belonging is missing. 
