@@ -248,8 +248,8 @@ A TV is set up on the wall and posters of what seemed to be characters from film
     <</linkreplace>>
 
 :: look
-    INSERT IMAGE OF BEDROOM
-   
+    [img[bedroom .jpeg]]
+    
     <<linkreplace "Continue" t8n>>\ "Well, I'll leave you to it. Let me know is you need anything." Anastasia says before walking out and closing the door behind her. 
          
          <<linkreplace "Continue" t8n>>\ You take a few more seconds to look around, processing the interaction you just had and repeating it over in your head.
@@ -684,12 +684,59 @@ You have shifted from sitting at your desk to the floor to your bed and back to 
     <</linkreplace>>
 <</linkreplace>>
 
-
-
 :: dinner           
+After a few hours out, you arrive back home from a local sushi resturaunt with Annabelle and Anastasia.
 
-After a few hours out, you arrive back home from a local sushi resturaunt with Annabelle and Anastasia
+<<linkreplace"Continue"t8n>>\ Over dinner, the three of you talked and got to know echother a little better. It was still a quite discomforting feeling for you still. 
 
-Over dinner, the tree of you talked and got to know echother a little better. It was still a quite discomforting feeling for you still. 
-Again, you found it hard to ask genuine questions and relate to them. The seem to be very nice, you just don't feel a deep conncetion. 
-The feeling of belonging is missing. 
+    <<linkreplace"Continue"t8n>>\ Again, you found it hard to ask genuine questions and relate to them. The seem to be very nice, you just don't feel a deep conncetion. 
+    The feeling of belonging is missing. 
+
+        <<linkreplace"Continue"t8n>>\  After most interactions you think, //[[is there something wrong with me?|wrong]]
+
+        <</linkreplace>>
+     <</linkreplace>>
+<</linkreplace>>
+
+:: wrong
+
+ Laying down in your bed, you get on your phone and start to go down a rabbit hole googling how you feel. 
+
+     <<linkreplace"Continue"t8n>>\ After about an hour of pulling together research from medical websites and gathering experiences from other people, things start falling in to place. 
+
+        <<linkreplace"Continue"t8n>>\ You begin to realize quite a lot of symptoms fall in line to what humans call neurodivergnecy. Specifically, the learning disability ADHD. 
+
+             <<linkreplace"Continue"t8n>>\ Sittng back in your desk chair, you go in to deep thought about your life. Experiences click into place. 
+
+                 <<linkreplace"Continue"t8n>>\ On Zillión, this would just be considered normal. The people of Zillión have built an entire world that accomodates the way its people function. 
+
+                    <<linkreplace"Continue"t8n>>\ But on Earth, its considered a "disability". 
+
+                         <<linkreplace"Continue"t8n>>\ You have noticed that in the short time you've been on earth, life is much more difficult to just exist normally in. 
+
+                            <<linkreplace"Continue"t8n>>\ You download a document detailing common and uncommon ADHD symptoms found predominantley in women. 
+
+                              <<linkreplace"Continue"t8n>>\You've found out that the majority of women do not get diagnosed until their adulthood due to steortypes and the societal upbringing perpetuated onto men and women from birth. 
+
+                                 <<linkreplace"Continue"t8n>>\ You go through the list of symptoms and start checking off the ones you deal with: 
+
+                                     <<linkreplace"Continue"t8n>>\Time blindness, unable to focus unless interested in a topic, abandoning hobbies the second you start them, hyperfocusing on one thing for hours on hours and unable to do anything else, missing important details, incredible sensory issues, to name a few.
+
+                                        <<linkreplace"Continue"t8n>>\ Once you go through the entire list, you look back at it in full. Noticing almost all symtoms are something you struggle with, you finally ask yourself the question: //Wait, do I have ADHD???//
+
+                                           [[>>]]
+                                        <</linkreplace>>
+                                     <</linkreplace>>
+                                 <</linkreplace>>
+                            <</linkreplace>>
+                         <</linkreplace>>
+                    <</linkreplace>>
+                 <</linkreplace>>
+             <</linkreplace>>
+         <</linkreplace>>
+    <</linkreplace>>
+<</linkreplace>>
+  
+:: >>
+
+! To Be Continued: Part 2 Coming Soon 
